@@ -23,7 +23,7 @@ export default function Hero() {
         pointerEvents: "none",
       }} />
 
-      <div className="container" style={{ paddingTop: 32, paddingBottom: 48 }}>
+      <div className="container" style={{ paddingTop: 32, paddingBottom: 92 }}>
         <div style={{
           display: "grid",
           gridTemplateColumns: "1.15fr 0.85fr",

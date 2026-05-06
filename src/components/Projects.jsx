@@ -57,7 +57,7 @@ export default function Projects() {
         </div>
 
         {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 22 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 }}>
           <AnimatePresence mode="popLayout">
             {filtered.map((p, i) => {
               const cs = CAT_STYLE[p.category] || { bg: "rgba(26,54,93,0.08)", color: "#1A365D" };

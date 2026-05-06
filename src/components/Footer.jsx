@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="container" style={{ paddingTop: 32, paddingBottom: 24 }}>
 
         {/* Top grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48, marginBottom: 32, paddingBottom: 32, borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48, marginBottom: 32, paddingBottom: 32, borderBottom: "1px solid rgba(255,255,255,0.07)", alignItems: "start" }}>
 
           {/* Brand */}
           <div>

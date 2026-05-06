@@ -62,14 +62,12 @@ body {
 .section {
   padding-top: var(--section-gap);
   padding-bottom: var(--section-gap);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
-.section-white { background: var(--bg-white); }
-.section-page  { background: var(--bg-page); }
-.section-alt   { background: var(--bg-alt); }
-.section-dark  {
-  background: linear-gradient(145deg, var(--bg-page) 0%, #0B1930 100%);
-  color: white;
+.section-white, .section-page, .section-alt, .section-dark {
+  background: var(--bg-page);
+  color: var(--text-dark);
 }
 
 /* ─── Section header block ─── */
