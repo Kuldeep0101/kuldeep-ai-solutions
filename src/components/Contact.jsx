@@ -37,9 +37,31 @@ export default function Contact() {
     const errs = validate(form);
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setBusy(true);
-    await new Promise(r => setTimeout(r, 1200));
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "f14b3dc4-d0d2-4501-8dc9-6afbb019d8ab",
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          subject: "New Inquiry from Kuldeep AI Solutions Portfolio",
+          from_name: "Portfolio Notification",
+        }),
+      });
+      
+      const result = await res.json();
+      if (result.success) {
+        setSent(true);
+      } else {
+        setErrors({ message: "Failed to send message. Please email me directly." });
+      }
+    } catch (error) {
+      setErrors({ message: "Network error. Please email me directly." });
+    }
     setBusy(false);
-    setSent(true);
   };
 
   return (
