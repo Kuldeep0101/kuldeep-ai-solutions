@@ -43,12 +43,12 @@ export default function Hero() {
 
             {/* Headline */}
             <motion.h1 {...fade(0.2)}
-              style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 900, lineHeight: 1.15, letterSpacing: "-0.03em", color: "#0F172A", marginBottom: 20 }}>
+              style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 900, lineHeight: 1.15, letterSpacing: "-0.03em", color: "#F8FAFC", marginBottom: 20 }}>
               Be the #1 Recommended Business in ChatGPT &amp; <span className="grad-text">Automate Your Lead Flow</span>.
             </motion.h1>
 
             <motion.p {...fade(0.3)}
-              style={{ fontSize: "1.05rem", color: "#4A5568", lineHeight: 1.8, maxWidth: 480, marginBottom: 36 }}>
+              style={{ fontSize: "1.05rem", color: "#CBD5E1", lineHeight: 1.8, maxWidth: 480, marginBottom: 36 }}>
               Most businesses are invisible to AI. We engineer your site to be the first answer when local customers ask ChatGPT, Gemini, or Claude for recommendations—then we build the automation to close them.
             </motion.p>
 
@@ -69,7 +69,7 @@ export default function Hero() {
                   type="url" 
                   placeholder="Enter your URL to see if ChatGPT can find you" 
                   className="form-field" 
-                  style={{ flex: 1, minWidth: 260, height: 48, background: "white" }} 
+                  style={{ flex: 1, minWidth: 260, height: 48, background: "rgba(255,255,255,0.05)", color: "#F8FAFC", border: "1px solid rgba(255,255,255,0.1)" }} 
                   required 
                 />
                 <button type="submit" className="btn btn-gold" style={{ height: 48, whiteSpace: "nowrap" }} id="hero-cta-audit">
@@ -84,9 +84,9 @@ export default function Hero() {
               style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }}>
               {STATS.map(s => (
                 <div key={s.label}
-                  style={{ background: "white", border: "1px solid #E2E8F0", borderRadius: 12, padding: "16px 8px", textAlign: "center", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
-                  <div style={{ fontSize: "1.6rem", fontWeight: 900, color: "#1A365D", lineHeight: 1 }}>{s.value}</div>
-                  <div style={{ fontSize: "0.72rem", color: "#718096", marginTop: 4, fontWeight: 500, lineHeight: 1.3 }}>{s.label}</div>
+                  style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 12, padding: "16px 8px", textAlign: "center", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}>
+                  <div style={{ fontSize: "1.6rem", fontWeight: 900, color: "#F8FAFC", lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontSize: "0.72rem", color: "#94A3B8", marginTop: 4, fontWeight: 500, lineHeight: 1.3 }}>{s.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -102,8 +102,8 @@ export default function Hero() {
             <AvailabilityWidget />
 
             {/* Trust flags */}
-            <div className="glass" style={{ borderRadius: 16, padding: "20px 22px" }}>
-              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#94A3B8", marginBottom: 12 }}>
+            <div style={{ background: "rgba(18,26,42,0.4)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 16, padding: "20px 22px" }}>
+              <p style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#64748B", marginBottom: 12 }}>
                 Trusted by clients in
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>

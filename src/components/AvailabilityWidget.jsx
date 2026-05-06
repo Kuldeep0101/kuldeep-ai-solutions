@@ -40,20 +40,20 @@ export default function AvailabilityWidget({ compact = false, dark = false }) {
   /* ── Full mode (for hero) ── */
   return (
     <div style={{
-      background: "rgba(255,255,255,0.85)",
-      backdropFilter: "blur(14px)",
-      WebkitBackdropFilter: "blur(14px)",
-      border: "1px solid rgba(255,255,255,0.92)",
+      background: "rgba(18,26,42,0.7)",
+      backdropFilter: "blur(20px)",
+      WebkitBackdropFilter: "blur(20px)",
+      border: "1px solid rgba(255,255,255,0.08)",
       borderRadius: 16,
-      padding: "22px 24px",
-      boxShadow: "0 4px 20px rgba(26,54,93,0.10)",
+      padding: "20px",
+      boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
       width: "100%",
-      maxWidth: 360,
+      maxWidth: 320,
     }}>
       {/* Title */}
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
-        <Globe size={16} style={{ color: "#1A365D" }} />
-        <span style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A365D" }}>
+        <Globe size={15} style={{ color: "#06B6D4" }} />
+        <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#F8FAFC" }}>
           Global Delivery Hub
         </span>
       </div>
@@ -65,20 +65,20 @@ export default function AvailabilityWidget({ compact = false, dark = false }) {
           <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "#22C55E" }} />
         </div>
         <div>
-          <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#15803d" }}>Working while you sleep</div>
-          <div style={{ fontSize: "0.75rem", color: "#6B7280" }}>Seamless US-India Sync</div>
+          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#22C55E" }}>Working while you sleep</div>
+          <div style={{ fontSize: "0.72rem", color: "#94A3B8" }}>Seamless US-India Sync</div>
         </div>
       </div>
 
       {/* Details Grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 12 }}>
-        <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 10, padding: "12px", textAlign: "center" }}>
-          <div style={{ fontSize: "0.65rem", color: "#94A3B8", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Priority Support</div>
-          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#1A365D" }}>Instant Response</div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 4 }}>
+        <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 10, padding: "12px", textAlign: "center" }}>
+          <div style={{ fontSize: "0.62rem", color: "#64748B", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Priority Support</div>
+          <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "#F8FAFC" }}>Instant Response</div>
         </div>
-        <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 10, padding: "12px", textAlign: "center" }}>
-          <div style={{ fontSize: "0.65rem", color: "#94A3B8", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Global Availability</div>
-          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#1A365D" }}>24/7 Operations</div>
+        <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 10, padding: "12px", textAlign: "center" }}>
+          <div style={{ fontSize: "0.62rem", color: "#64748B", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Global Availability</div>
+          <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "#F8FAFC" }}>24/7 Operations</div>
         </div>
       </div>
 
