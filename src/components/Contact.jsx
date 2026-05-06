@@ -19,7 +19,7 @@ function validate(f) {
   return e;
 }
 
-export default function Contact() {
+export default function Contact({ onAuditSuccess }) {
   const [form, setForm]     = useState({ email: "", website: "", goal: "" });
   const [errors, setErrors] = useState({});
   const [sent, setSent]     = useState(false);
@@ -54,6 +54,8 @@ export default function Contact() {
       const result = await res.json();
       if (result.success) {
         setSent(true);
+        if (onAuditSuccess) onAuditSuccess();
+      } else {
         setErrors({ form: "Failed to send request. Please email me directly." });
       }
     } catch (error) {
@@ -219,10 +221,8 @@ export default function Contact() {
                   initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
                   style={{ textAlign: "center", padding: "40px 0" }}>
                   <CheckCircle size={52} color="#22C55E" style={{ margin: "0 auto 16px" }} />
-                  <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#111827", marginBottom: 8 }}>Message Sent!</h3>
-                  <p style={{ color: "#6B7280", marginBottom: 24 }}>I'll respond within 24 hours.</p>
-                  <button onClick={() => { setSent(false); setForm({ name: "", email: "", message: "" }); }}
-                    className="btn btn-outline">Send Another</button>
+                  <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#111827", marginBottom: 8 }}>Audit in Progress</h3>
+                  <p style={{ color: "#6B7280", marginBottom: 24, lineHeight: 1.6 }}>We are analyzing your domain for AI Visibility. You will receive the report at <strong>{form.email}</strong> within 12 hours.</p>
                 </motion.div>
               )}
             </div>
