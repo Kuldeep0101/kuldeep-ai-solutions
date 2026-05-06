@@ -129,7 +129,7 @@ export default function EstimateCalculator() {
 
                   {/* Option buttons */}
                   {cur.options && (
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                    <div className="est-options-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
                       {cur.options.map((opt, idx) => {
                         const isOn = cur.key === "service" ? sel.service.includes(idx) : sel[cur.key] === idx;
                         return (
@@ -238,6 +238,11 @@ export default function EstimateCalculator() {
           </div>
         </motion.div>
       </div>
+      <style>{`
+        @media (max-width: 600px) {
+          .est-options-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }
