@@ -91,11 +91,11 @@ export default function EstimateCalculator() {
           style={{
             maxWidth: 640,
             margin: "0 auto",
-            background: "white",
+            background: "rgba(255,255,255,0.02)",
             borderRadius: 20,
-            border: "1px solid #E2E8F0",
+            border: "1px solid rgba(255,255,255,0.05)",
             overflow: "hidden",
-            boxShadow: "0 8px 40px rgba(26,54,93,0.10)",
+            boxShadow: "0 8px 40px rgba(0,0,0,0.20)",
           }}
         >
           {/* Progress */}
@@ -117,7 +117,7 @@ export default function EstimateCalculator() {
                     <span>Step {step + 1} of 3</span>
                     <span style={{ color: "#1A365D" }}>— {cur.title}</span>
                   </div>
-                  <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#111827", marginBottom: 24 }}>
+                  <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#F8FAFC", marginBottom: 24 }}>
                     {cur.question}
                   </h3>
 
@@ -131,19 +131,19 @@ export default function EstimateCalculator() {
                             style={{
                               padding: "14px 16px",
                               borderRadius: 12,
-                              border: `2px solid ${isOn ? "#1A365D" : "#E2E8F0"}`,
-                              background: isOn ? "#1A365D" : "white",
+                              border: `1px solid ${isOn ? "#06B6D4" : "rgba(255,255,255,0.1)"}`,
+                              background: isOn ? "rgba(6,182,212,0.1)" : "rgba(255,255,255,0.03)",
                               display: "flex", alignItems: "center", gap: 12,
                               cursor: "pointer",
                               transition: "all 0.18s",
                               textAlign: "left",
-                              boxShadow: isOn ? "0 4px 14px rgba(26,54,93,0.22)" : "none",
+                              boxShadow: isOn ? "0 4px 14px rgba(6,182,212,0.15)" : "none",
                             }}>
                             <span style={{ fontSize: "1.4rem", lineHeight: 1 }}>{opt.icon}</span>
-                            <span style={{ fontSize: "0.875rem", fontWeight: 600, color: isOn ? "white" : "#374151", flex: 1 }}>
+                            <span style={{ fontSize: "0.875rem", fontWeight: 600, color: isOn ? "#06B6D4" : "#CBD5E1", flex: 1 }}>
                               {opt.label}
                             </span>
-                            {isOn && <Check size={14} color="white" />}
+                            {isOn && <Check size={14} color="#06B6D4" />}
                           </button>
                         );
                       })}
@@ -155,7 +155,7 @@ export default function EstimateCalculator() {
                     <div>
                       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
                         {cur.labels.map(l => (
-                          <span key={l} style={{ fontSize: "0.72rem", color: "#6B7280", fontWeight: 500 }}>{l}</span>
+                          <span key={l} style={{ fontSize: "0.72rem", color: "#94A3B8", fontWeight: 500 }}>{l}</span>
                         ))}
                       </div>
                       <input type="range" min={cur.min} max={cur.max} value={sel.scale}
@@ -174,7 +174,7 @@ export default function EstimateCalculator() {
                   {/* Navigation */}
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 32 }}>
                     <button onClick={prev} disabled={step === 0}
-                      style={{ display: "flex", alignItems: "center", gap: 4, fontSize: "0.875rem", fontWeight: 500, color: step === 0 ? "#CBD5E0" : "#6B7280", background: "none", border: "none", cursor: step === 0 ? "not-allowed" : "pointer", padding: 0 }}>
+                      style={{ display: "flex", alignItems: "center", gap: 4, fontSize: "0.875rem", fontWeight: 500, color: step === 0 ? "rgba(255,255,255,0.2)" : "#94A3B8", background: "none", border: "none", cursor: step === 0 ? "not-allowed" : "pointer", padding: 0 }}>
                       <ChevronLeft size={15} /> Back
                     </button>
                     <button onClick={next} disabled={!canNext()}
@@ -192,11 +192,11 @@ export default function EstimateCalculator() {
                   transition={{ duration: 0.3 }}
                   style={{ textAlign: "center" }}>
 
-                  <div style={{ width: 64, height: 64, borderRadius: "50%", background: "#F0FDF4", border: "2px solid #BBF7D0", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
-                    <Check size={30} color="#16a34a" />
+                  <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(34,197,94,0.1)", border: "2px solid rgba(34,197,94,0.2)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+                    <Check size={30} color="#22C55E" />
                   </div>
-                  <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#111827", marginBottom: 8 }}>Your Estimate</h3>
-                  <p style={{ color: "#6B7280", fontSize: "0.9rem", marginBottom: 28 }}>
+                  <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#F8FAFC", marginBottom: 8 }}>Your Estimate</h3>
+                  <p style={{ color: "#94A3B8", fontSize: "0.9rem", marginBottom: 28 }}>
                     Based on your selections. Final pricing depends on detailed requirements.
                   </p>
 

@@ -66,19 +66,19 @@ export default function Testimonials() {
                 <div className="stars" style={{ marginBottom: 12 }}>★★★★★</div>
 
                 {/* Quote */}
-                <p style={{ fontSize: "0.875rem", color: "#374151", lineHeight: 1.75, flex: 1, marginBottom: 18 }}>
+                <p style={{ fontSize: "0.875rem", color: "#94A3B8", lineHeight: 1.75, flex: 1, marginBottom: 18 }}>
                   "{t.review}"
                 </p>
 
                 {/* Author */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 14, borderTop: "1px solid #F1F5F9" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,0.05)" }}>
                   {/* Avatar */}
                   <div style={{ width: 38, height: 38, borderRadius: "50%", background: "linear-gradient(135deg, #1A365D, #2A4A7F)", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontWeight: 700, fontSize: "0.8rem", flexShrink: 0 }}>
                     {initials}
                   </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontWeight: 700, fontSize: "0.875rem", color: "#111827" }}>{t.name}</div>
-                    <div style={{ fontSize: "0.75rem", color: "#6B7280" }}>{t.role} · {t.flag} {t.company}</div>
+                    <div style={{ fontWeight: 700, fontSize: "0.875rem", color: "#F8FAFC" }}>{t.name}</div>
+                    <div style={{ fontSize: "0.75rem", color: "#CBD5E1" }}>{t.role} · {t.flag} {t.company}</div>
                   </div>
                   <span style={{ flexShrink: 0, padding: "2px 8px", borderRadius: 50, fontSize: "0.66rem", fontWeight: 700, background: cs.bg, color: cs.color }}>
                     {t.category.split(" ")[0]}

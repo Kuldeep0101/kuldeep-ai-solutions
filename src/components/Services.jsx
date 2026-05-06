@@ -6,7 +6,7 @@ const ICONS = { Sparkles, TrendingUp, Code2 };
 
 export default function Services() {
   return (
-    <section id="services" className="section section-white">
+    <section id="services" className="section section-page">
       <div className="container">
         {/* Header */}
         <motion.div
@@ -66,22 +66,29 @@ export default function Services() {
                 </div>
 
                 {/* Body */}
-                <div style={{ padding: "24px", display: "flex", flexDirection: "column", flex: 1 }}>
-                  <p style={{ fontSize: "0.875rem", color: "#4A5568", lineHeight: 1.75, marginBottom: 18, flex: 1 }}>
+                <div style={{ padding: "24px", display: "flex", flexDirection: "column", flex: 1, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderTop: "none", borderBottomLeftRadius: 16, borderBottomRightRadius: 16 }}>
+                  <p style={{ fontSize: "0.875rem", color: "#94A3B8", lineHeight: 1.75, marginBottom: 18, flex: 1 }}>
                     {svc.description}
                   </p>
-                  <ul style={{ listStyle: "none", marginBottom: 20 }}>
+                  <ul style={{ listStyle: "none", marginBottom: 24 }}>
                     {svc.highlights.map(h => (
-                      <li key={h} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "0.845rem", color: "#374151", marginBottom: 8 }}>
-                        <CheckCircle2 size={14} style={{ color: "#1A365D", flexShrink: 0 }} />
+                      <li key={h} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "0.845rem", color: "#CBD5E1", marginBottom: 8 }}>
+                        <CheckCircle2 size={14} style={{ color: "#06B6D4", flexShrink: 0 }} />
                         {h}
                       </li>
                     ))}
                   </ul>
-                  <a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: "0.845rem", fontWeight: 700, color: "#1A365D", textDecoration: "none" }}>
-                    Discuss this service <ArrowRight size={14} />
-                  </a>
+                  <motion.a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02, backgroundColor: "rgba(6,182,212,0.15)" }}
+                    whileTap={{ scale: 0.98 }}
+                    style={{ 
+                      display: "flex", alignItems: "center", justifyContent: "center", gap: 8, 
+                      fontSize: "0.85rem", fontWeight: 700, color: "#06B6D4", textDecoration: "none",
+                      padding: "12px", background: "rgba(6,182,212,0.08)", borderRadius: 8,
+                      border: "1px solid rgba(6,182,212,0.2)", marginTop: "auto"
+                    }}>
+                    Discuss this service <ArrowRight size={16} />
+                  </motion.a>
                 </div>
               </motion.article>
             );

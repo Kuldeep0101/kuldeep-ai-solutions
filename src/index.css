@@ -228,21 +228,21 @@ body {
 .form-field {
   width: 100%;
   padding: 12px 14px;
-  border: 1.5px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 9px;
   font-size: 0.9rem;
   font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
-  background: white;
+  color: #F8FAFC;
+  background: rgba(255,255,255,0.03);
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
 }
 .form-field:focus {
-  border-color: var(--primary-mid);
-  box-shadow: 0 0 0 3px rgba(26,54,93,0.08);
+  border-color: #06B6D4;
+  box-shadow: 0 0 0 3px rgba(6,182,212,0.15);
 }
-.form-field::placeholder { color: #A0AEC0; }
-.form-field-error { border-color: #FC8181; }
+.form-field::placeholder { color: #64748B; }
+.form-field-error { border-color: #EF4444; }
 
 /* ─── Range slider ─── */
 input[type="range"] {
@@ -344,17 +344,18 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
 
 /* ─── Testimonial card ─── */
 .tcard {
-  background: rgba(255,255,255,0.96);
-  border: 1px solid #E2E8F0;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: var(--radius-card);
   padding: 24px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   flex-shrink: 0;
   width: 320px;
 }
 .tcard:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+  border-color: rgba(255,255,255,0.15);
 }
 
 /* ─── Glass ─── */

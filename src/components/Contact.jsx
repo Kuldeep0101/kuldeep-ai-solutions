@@ -139,10 +139,10 @@ export default function Contact({ onAuditSuccess }) {
             </div>
 
             {/* Calendly card */}
-            <div style={{ background: "white", border: "1px solid #E2E8F0", borderRadius: 16, padding: "24px", textAlign: "center", boxShadow: "0 2px 12px rgba(26,54,93,0.06)" }}>
+            <div style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 16, padding: "24px", textAlign: "center", boxShadow: "0 8px 32px rgba(0,0,0,0.2)" }}>
               <div style={{ fontSize: "2rem", marginBottom: 8 }}>📅</div>
-              <div style={{ fontWeight: 700, fontSize: "1rem", color: "#111827", marginBottom: 6 }}>Prefer a Direct Call?</div>
-              <p style={{ fontSize: "0.84rem", color: "#6B7280", marginBottom: 18 }}>Book a free 30-minute strategy session via Calendly.</p>
+              <div style={{ fontWeight: 700, fontSize: "1rem", color: "#F8FAFC", marginBottom: 6 }}>Prefer a Direct Call?</div>
+              <p style={{ fontSize: "0.84rem", color: "#94A3B8", marginBottom: 18 }}>Book a free 30-minute strategy session via Calendly.</p>
               <a href={CONTACT.calendly} target="_blank" rel="noopener noreferrer"
                 className="btn btn-gold" style={{ width: "100%" }} id="contact-calendly-cta">
                 Book Free Session
@@ -157,15 +157,15 @@ export default function Contact({ onAuditSuccess }) {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div style={{ background: "white", border: "1px solid #E2E8F0", borderRadius: 16, padding: "36px 32px", boxShadow: "0 2px 12px rgba(26,54,93,0.06)" }}>
+            <div style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 16, padding: "36px 32px", boxShadow: "0 8px 32px rgba(0,0,0,0.2)" }}>
               {!sent ? (
                 <form onSubmit={submit} noValidate>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#111827", marginBottom: 24 }}>Request Your Free AI Audit</h3>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#F8FAFC", marginBottom: 24 }}>Request Your Free AI Audit</h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
 
                     {/* Email */}
                     <div>
-                      <label htmlFor="c-email" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#374151", marginBottom: 6 }}>
+                      <label htmlFor="c-email" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#CBD5E1", marginBottom: 6 }}>
                         Email Address <span style={{ color: "#EF4444" }}>*</span>
                       </label>
                       <input id="c-email" type="email" name="email" value={form.email} onChange={change}
@@ -176,7 +176,7 @@ export default function Contact({ onAuditSuccess }) {
 
                     {/* Website */}
                     <div>
-                      <label htmlFor="c-website" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#374151", marginBottom: 6 }}>
+                      <label htmlFor="c-website" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#CBD5E1", marginBottom: 6 }}>
                         Your Website URL <span style={{ color: "#EF4444" }}>*</span>
                       </label>
                       <input id="c-website" type="url" name="website" value={form.website} onChange={change}
@@ -187,7 +187,7 @@ export default function Contact({ onAuditSuccess }) {
 
                     {/* Goal */}
                     <div>
-                      <label htmlFor="c-goal" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#374151", marginBottom: 6 }}>
+                      <label htmlFor="c-goal" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#CBD5E1", marginBottom: 6 }}>
                         What is your #1 Goal? <span style={{ color: "#EF4444" }}>*</span>
                       </label>
                       <select id="c-goal" name="goal" value={form.goal} onChange={change}
@@ -221,8 +221,8 @@ export default function Contact({ onAuditSuccess }) {
                   initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
                   style={{ textAlign: "center", padding: "40px 0" }}>
                   <CheckCircle size={52} color="#22C55E" style={{ margin: "0 auto 16px" }} />
-                  <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#111827", marginBottom: 8 }}>Audit in Progress</h3>
-                  <p style={{ color: "#6B7280", marginBottom: 24, lineHeight: 1.6 }}>We are analyzing your domain for AI Visibility. You will receive the report at <strong>{form.email}</strong> within 12 hours.</p>
+                  <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#F8FAFC", marginBottom: 8 }}>Audit in Progress</h3>
+                  <p style={{ color: "#94A3B8", marginBottom: 24, lineHeight: 1.6 }}>We are analyzing your domain for AI Visibility. You will receive the report at <strong>{form.email}</strong> within 12 hours.</p>
                 </motion.div>
               )}
             </div>
