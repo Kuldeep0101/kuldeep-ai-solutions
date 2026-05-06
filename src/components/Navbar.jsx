@@ -61,10 +61,10 @@ export default function Navbar() {
           top: 0, left: 0, right: 0,
           zIndex: 50,
           height: 68,
-          background: scrolled ? "rgba(255,255,255,0.96)" : "transparent",
+          background: scrolled ? "rgba(10,14,23,0.85)" : "transparent",
           backdropFilter: scrolled ? "blur(14px)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(14px)" : "none",
-          boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.07)" : "none",
+          boxShadow: scrolled ? "0 1px 0 rgba(255,255,255,0.05)" : "none",
           transition: "background 0.3s, box-shadow 0.3s",
         }}
       >
@@ -73,10 +73,10 @@ export default function Navbar() {
           <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10 }}>
             <Logo size={36} />
             <div>
-              <div style={{ fontWeight: 800, fontSize: "0.95rem", color: "#1A365D", lineHeight: 1.1 }}>
-                Kuldeep<span style={{ color: "#D4A843" }}>AI</span>
+              <div style={{ fontWeight: 800, fontSize: "0.95rem", color: "#F8FAFC", lineHeight: 1.1 }}>
+                Kuldeep<span style={{ color: "#F59E0B" }}>AI</span>
               </div>
-              <div style={{ fontSize: "0.65rem", color: "#718096", fontWeight: 600, letterSpacing: "0.04em" }}>Solutions</div>
+              <div style={{ fontSize: "0.65rem", color: "#94A3B8", fontWeight: 600, letterSpacing: "0.04em" }}>Solutions</div>
             </div>
           </a>
 
@@ -100,7 +100,7 @@ export default function Navbar() {
               Book a Call
             </a>
             <button className="mobile-ham" onClick={() => setOpen(true)}
-              style={{ background: "none", border: "none", cursor: "pointer", color: "#4A5568", display: "none" }}>
+              style={{ background: "none", border: "none", cursor: "pointer", color: "#CBD5E1", display: "none" }}>
               <Menu size={22} />
             </button>
           </div>
@@ -121,7 +121,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.18 }}>
             <button onClick={() => setOpen(false)}
-              style={{ position: "absolute", top: 20, right: 20, background: "#F1F5F9", border: "none", borderRadius: 8, width: 38, height: 38, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "#374151" }}>
+              style={{ position: "absolute", top: 20, right: 20, background: "rgba(255,255,255,0.05)", border: "none", borderRadius: 8, width: 38, height: 38, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "#F8FAFC" }}>
               <X size={20} />
             </button>
             <Logo size={44} />
@@ -129,7 +129,7 @@ export default function Navbar() {
               <motion.button key={l.href}
                 initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.055 }}
                 onClick={() => goto(l.href)}
-                style={{ fontSize: "1.4rem", fontWeight: 700, color: active === l.href ? "#2A4A7F" : "#1A365D", background: "none", border: "none", cursor: "pointer" }}>
+                style={{ fontSize: "1.4rem", fontWeight: 700, color: active === l.href ? "#06B6D4" : "#F8FAFC", background: "none", border: "none", cursor: "pointer" }}>
                 {l.label}
               </motion.button>
             ))}
