@@ -201,12 +201,18 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* ─── Pulse dot ─── */
+/* ─── Pulse dot & Blink ─── */
 @keyframes pulse-dot {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.6); opacity: 0.55; }
 }
 .pulse { animation: pulse-dot 2s ease-in-out infinite; }
+
+@keyframes blink-anim {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.blink { animation: blink-anim 2s ease-in-out infinite; }
 
 /* ─── Tag ─── */
 .tag {
@@ -243,6 +249,14 @@ body {
 }
 .form-field::placeholder { color: #64748B; }
 .form-field-error { border-color: #EF4444; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #0F172A inset !important;
+    -webkit-text-fill-color: #F8FAFC !important;
+}
 
 /* ─── Range slider ─── */
 input[type="range"] {

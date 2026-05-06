@@ -23,10 +23,10 @@ const goto = href => document.querySelector(href)?.scrollIntoView({ behavior: "s
 export default function Footer() {
   return (
     <footer style={{ background: "#0A1A2E", color: "white" }}>
-      <div className="container" style={{ paddingTop: 64, paddingBottom: 40 }}>
+      <div className="container" style={{ paddingTop: 32, paddingBottom: 24 }}>
 
         {/* Top grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48, marginBottom: 48, paddingBottom: 40, borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48, marginBottom: 32, paddingBottom: 32, borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
 
           {/* Brand */}
           <div>

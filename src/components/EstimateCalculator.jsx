@@ -38,20 +38,26 @@ const STEPS = [
 
 export default function EstimateCalculator() {
   const [step, setStep] = useState(0);
-  const [sel, setSel] = useState({ service: null, scale: 3, timeline: null });
+  const [sel, setSel] = useState({ service: [], scale: 3, timeline: null });
   const [done, setDone] = useState(false);
 
   const cur = STEPS[step];
-  const pick = (key, val) => setSel(p => ({ ...p, [key]: val }));
-  const canNext = () => step === 1 || (step === 0 ? sel.service !== null : sel.timeline !== null);
+  const pick = (key, val) => setSel(p => {
+    if (key === "service") {
+      const arr = p.service.includes(val) ? p.service.filter(x => x !== val) : [...p.service, val];
+      return { ...p, service: arr };
+    }
+    return { ...p, [key]: val };
+  });
+  const canNext = () => step === 1 || (step === 0 ? sel.service.length > 0 : sel.timeline !== null);
 
   const next = () => step < 2 ? setStep(step + 1) : setDone(true);
   const prev = () => done ? setDone(false) : setStep(Math.max(0, step - 1));
-  const reset = () => { setStep(0); setSel({ service: null, scale: 3, timeline: null }); setDone(false); };
+  const reset = () => { setStep(0); setSel({ service: [], scale: 3, timeline: null }); setDone(false); };
 
   const estimate = () => {
-    if (sel.service === null) return null;
-    const base = STEPS[0].options[sel.service].base;
+    if (sel.service.length === 0) return null;
+    const base = sel.service.reduce((acc, idx) => acc + STEPS[0].options[idx].base, 0);
     const scaleMul = STEPS[1].multipliers[sel.scale - 1];
     const timeMul = sel.timeline !== null ? STEPS[2].options[sel.timeline].mult : 1;
     const low = Math.round(base * scaleMul * timeMul);
@@ -125,7 +131,7 @@ export default function EstimateCalculator() {
                   {cur.options && (
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
                       {cur.options.map((opt, idx) => {
-                        const isOn = sel[cur.key] === idx;
+                        const isOn = cur.key === "service" ? sel.service.includes(idx) : sel[cur.key] === idx;
                         return (
                           <button key={opt.label} onClick={() => pick(cur.key, idx)}
                             style={{
@@ -153,6 +159,9 @@ export default function EstimateCalculator() {
                   {/* Slider */}
                   {cur.type === "slider" && (
                     <div>
+                      <p style={{ fontSize: "0.82rem", color: "#64748B", marginBottom: 24, lineHeight: 1.5 }}>
+                        <strong>MVP</strong> is a core feature set. <strong>Enterprise</strong> includes global localization, advanced security, and high-scale architecture.
+                      </p>
                       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
                         {cur.labels.map(l => (
                           <span key={l} style={{ fontSize: "0.72rem", color: "#94A3B8", fontWeight: 500 }}>{l}</span>

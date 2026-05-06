@@ -192,10 +192,10 @@ export default function Contact({ onAuditSuccess }) {
                       </label>
                       <select id="c-goal" name="goal" value={form.goal} onChange={change}
                         className={`form-field${errors.goal ? " form-field-error" : ""}`} style={{ appearance: "auto" }}>
-                        <option value="" disabled>Select an option...</option>
-                        <option value="More Leads">More Leads</option>
-                        <option value="Better Visibility">Better Visibility</option>
-                        <option value="Automation">Lead Automation</option>
+                        <option value="" disabled style={{ background: "#0F172A", color: "#F8FAFC" }}>Select an option...</option>
+                        <option value="More Leads" style={{ background: "#0F172A", color: "#F8FAFC" }}>More Leads</option>
+                        <option value="Better Visibility" style={{ background: "#0F172A", color: "#F8FAFC" }}>Better Visibility</option>
+                        <option value="Automation" style={{ background: "#0F172A", color: "#F8FAFC" }}>Lead Automation</option>
                       </select>
                       {errors.goal && <p style={{ fontSize: "0.78rem", color: "#EF4444", marginTop: 4 }}>{errors.goal}</p>}
                     </div>

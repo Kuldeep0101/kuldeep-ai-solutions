@@ -51,7 +51,7 @@ export default function Services() {
                   }} />
                   {/* Icon */}
                   <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(255,255,255,0.18)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
-                    <Icon size={22} color="white" />
+                    <Icon size={22} color="white" className="blink" />
                   </div>
                   <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "white", marginBottom: 4 }}>{svc.title}</h3>
                   <p style={{ fontSize: "0.8rem", color: "rgba(191,219,254,0.9)", fontWeight: 500 }}>{svc.subtitle}</p>
