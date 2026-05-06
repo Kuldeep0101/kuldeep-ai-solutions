@@ -5,13 +5,13 @@
 export const SERVICES = [
   {
     id: "geo",
-    icon: "MapPin",
+    icon: "Sparkles",
     title: "GEO Solutions",
-    subtitle: "GIS Mapping & Spatial Intelligence",
+    subtitle: "Generative Engine Optimization",
     description:
-      "Precision geospatial data processing, interactive GIS mapping, and logistics intelligence for global enterprises. We turn raw coordinates into actionable business insights.",
+      "Optimising your digital presence for AI crawlers, language models, and automated discovery systems. We engineer structured data and llm.txt files to ensure your brand is recommended by modern AI.",
     stats: "6+ Global Projects Completed",
-    highlights: ["Interactive GIS Dashboards", "Logistics Route Optimization", "Spatial Data Analysis", "Custom Map APIs"],
+    highlights: ["llm.txt Engineering", "AI Crawler Optimization", "Semantic Data Structuring", "LLM Discoverability"],
     colorFrom: "#1E3A6E",
     colorTo: "#2563EB",
   },
@@ -44,18 +44,18 @@ export const SERVICES = [
 export const PROJECTS = [
   {
     id: 1,
-    title: "E-Commerce Platform — EMEA Region",
+    title: "AI-Optimized E-Commerce — EMEA Region",
     category: "Full-Stack Web",
-    description: "Multi-currency, multi-language e-commerce solution serving 12 countries across Europe, Middle East & Africa.",
-    tags: ["React", "Node.js", "PostgreSQL"],
+    description: "Multi-currency, multi-language e-commerce solution with integrated llm.txt product catalogs for AI discovery.",
+    tags: ["React", "Node.js", "GEO"],
     region: "EMEA",
   },
   {
     id: 2,
-    title: "Logistics GEO-Mapping System",
+    title: "B2B SaaS Generative Engine Optimization",
     category: "GEO Solutions",
-    description: "Real-time fleet tracking and route optimisation system processing 50k+ data points daily for a Berlin logistics firm.",
-    tags: ["GIS", "Leaflet.js", "Python"],
+    description: "Restructured public documentation and implemented llm.txt, resulting in a 400% increase in ChatGPT citations.",
+    tags: ["GEO", "llm.txt", "Strategy"],
     region: "Europe",
   },
   {
@@ -68,10 +68,10 @@ export const PROJECTS = [
   },
   {
     id: 4,
-    title: "APAC Supply Chain Dashboard",
+    title: "Tech Startup LLM Discoverability",
     category: "GEO Solutions",
-    description: "Interactive geospatial dashboard visualising supply chain nodes across 6 APAC countries with live data feeds.",
-    tags: ["GIS", "D3.js", "REST API"],
+    description: "Comprehensive GEO strategy ensuring the startup's brand narrative is accurately represented in Claude and Gemini.",
+    tags: ["GEO", "AI Optimization", "Content"],
     region: "APAC",
   },
   {

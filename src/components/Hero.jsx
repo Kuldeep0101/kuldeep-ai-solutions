@@ -51,7 +51,7 @@ export default function Hero() {
 
             <motion.p {...fade(0.3)}
               style={{ fontSize: "1.05rem", color: "#4A5568", lineHeight: 1.8, maxWidth: 480, marginBottom: 36 }}>
-              From precision GEO mapping to high-converting React applications and
+              From Generative Engine Optimization to high-converting React applications and
               global social media strategies — engineered for scale, delivered with excellence.
             </motion.p>
 
@@ -96,7 +96,7 @@ export default function Hero() {
                 Trusted by clients in
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {["🇦🇺 Australia", "🇺🇸 USA", "🇬🇧 UK", "🇦🇪 UAE", "🇯🇵 Japan", "🇩🇪 Germany", "🇸🇬 Singapore", "🇫🇷 France"].map(c => (
+                {["🇦🇺 Australia", "🇺🇸 USA", "🇬🇧 UK", "🇦🇪 UAE"].map(c => (
                   <span key={c} className="tag">{c}</span>
                 ))}
               </div>
@@ -105,9 +105,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll hint */}
       <div className="scroll-bounce"
-        style={{ position: "absolute", bottom: 24, left: "50%", transform: "translateX(-50%)", textAlign: "center", color: "#94A3B8" }}>
+        style={{ marginTop: "auto", paddingBottom: 24, textAlign: "center", color: "#94A3B8" }}>
         <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 4 }}>SCROLL</div>
         <ChevronDown size={14} />
       </div>

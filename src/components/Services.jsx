@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { MapPin, TrendingUp, Code2, CheckCircle2, ArrowRight } from "lucide-react";
+import { Sparkles, TrendingUp, Code2, CheckCircle2, ArrowRight } from "lucide-react";
 import { SERVICES } from "../data";
 
-const ICONS = { MapPin, TrendingUp, Code2 };
+const ICONS = { Sparkles, TrendingUp, Code2 };
 
 export default function Services() {
   return (
