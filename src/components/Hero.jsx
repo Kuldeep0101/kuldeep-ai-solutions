@@ -54,7 +54,17 @@ export default function Hero() {
 
             {/* Quick Scan & CTAs */}
             <motion.div {...fade(0.4)} style={{ marginBottom: 44 }}>
-              <form onSubmit={(e) => { e.preventDefault(); scrollTo("#contact"); }} style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+              <form onSubmit={(e) => { 
+                e.preventDefault(); 
+                const url = e.target.elements[0].value;
+                const contactInput = document.getElementById("c-website");
+                if (contactInput && url) {
+                  const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
+                  setter.call(contactInput, url);
+                  contactInput.dispatchEvent(new Event("input", { bubbles: true }));
+                }
+                scrollTo("#contact"); 
+              }} style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
                 <input 
                   type="url" 
                   placeholder="Enter your URL to see if ChatGPT can find you" 
