@@ -4,17 +4,17 @@ import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 const LINKS = [
-  { label: "Services",     href: "#services"     },
-  { label: "Projects",     href: "#projects"     },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Estimate",     href: "#estimate"     },
-  { label: "Contact",      href: "#contact"      },
+  { label: "Estimate", href: "#estimate" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen]         = useState(false);
-  const [active, setActive]     = useState("");
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
 
   // Scroll state (background transition)
   useEffect(() => {
@@ -95,7 +95,7 @@ export default function Navbar() {
 
           {/* CTA + hamburger */}
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <a href="https://calendly.com/ks71156" target="_blank" rel="noopener noreferrer"
+            <a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer"
               className="btn btn-primary btn-sm desktop-nav">
               Book a Call
             </a>
@@ -133,7 +133,7 @@ export default function Navbar() {
                 {l.label}
               </motion.button>
             ))}
-            <a href="https://calendly.com/ks71156" target="_blank" rel="noopener noreferrer" className="btn btn-gold">
+            <a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer" className="btn btn-gold">
               📅 Book a Call
             </a>
           </motion.div>

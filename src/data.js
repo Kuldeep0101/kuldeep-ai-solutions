@@ -208,5 +208,5 @@ export const CONTACT = {
   linkedin: "https://linkedin.com/in/kuldeep-solutions",
   github: "https://github.com/kuldeep-solutions",
   twitter: "https://twitter.com/kuldeep_solutions",
-  calendly: "https://calendly.com/ks71156/new-meeting",
+  calendly: "https://calendly.com/ks71156/strategy-session",
 };

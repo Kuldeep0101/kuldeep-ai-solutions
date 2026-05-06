@@ -8,10 +8,10 @@ const STEPS = [
     question: "What type of project do you need?",
     key: "service",
     options: [
-      { label: "Full-Stack Web App",        icon: "💻", base: 1500 },
-      { label: "GEO / Mapping Solution",    icon: "🗺️", base: 2000 },
-      { label: "Social Media Strategy",     icon: "📱", base: 800  },
-      { label: "Combined / Multi-Service",  icon: "🚀", base: 3000 },
+      { label: "Full-Stack Web App", icon: "💻", base: 1500 },
+      { label: "GEO / Mapping Solution", icon: "🗺️", base: 2000 },
+      { label: "Social Media Strategy", icon: "📱", base: 800 },
+      { label: "Combined / Multi-Service", icon: "🚀", base: 3000 },
     ],
   },
   {
@@ -28,18 +28,18 @@ const STEPS = [
     question: "What is your preferred timeline?",
     key: "timeline",
     options: [
-      { label: "Rush — 1–2 weeks",       icon: "⚡", mult: 1.5  },
-      { label: "Standard — 4–6 weeks",   icon: "📅", mult: 1    },
-      { label: "Relaxed — 2–3 months",   icon: "🌱", mult: 0.85 },
+      { label: "Rush — 1–2 weeks", icon: "⚡", mult: 1.5 },
+      { label: "Standard — 4–6 weeks", icon: "📅", mult: 1 },
+      { label: "Relaxed — 2–3 months", icon: "🌱", mult: 0.85 },
       { label: "Flexible — No deadline", icon: "♾️", mult: 0.75 },
     ],
   },
 ];
 
 export default function EstimateCalculator() {
-  const [step, setStep]     = useState(0);
-  const [sel, setSel]       = useState({ service: null, scale: 3, timeline: null });
-  const [done, setDone]     = useState(false);
+  const [step, setStep] = useState(0);
+  const [sel, setSel] = useState({ service: null, scale: 3, timeline: null });
+  const [done, setDone] = useState(false);
 
   const cur = STEPS[step];
   const pick = (key, val) => setSel(p => ({ ...p, [key]: val }));
@@ -51,10 +51,10 @@ export default function EstimateCalculator() {
 
   const estimate = () => {
     if (sel.service === null) return null;
-    const base     = STEPS[0].options[sel.service].base;
+    const base = STEPS[0].options[sel.service].base;
     const scaleMul = STEPS[1].multipliers[sel.scale - 1];
-    const timeMul  = sel.timeline !== null ? STEPS[2].options[sel.timeline].mult : 1;
-    const low  = Math.round(base * scaleMul * timeMul);
+    const timeMul = sel.timeline !== null ? STEPS[2].options[sel.timeline].mult : 1;
+    const low = Math.round(base * scaleMul * timeMul);
     return { low, high: Math.round(low * 1.35) };
   };
   const result = estimate();
@@ -217,7 +217,7 @@ export default function EstimateCalculator() {
                   )}
 
                   <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-                    <a href="https://calendly.com/ks71156" target="_blank" rel="noopener noreferrer"
+                    <a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer"
                       className="btn btn-gold" id="estimate-calendly-cta">
                       📅 Book a Consultation
                     </a>

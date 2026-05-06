@@ -78,7 +78,7 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <a href="https://calendly.com/ks71156" target="_blank" rel="noopener noreferrer"
+                  <a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: "0.845rem", fontWeight: 700, color: "#1A365D", textDecoration: "none" }}>
                     Discuss this service <ArrowRight size={14} />
                   </a>

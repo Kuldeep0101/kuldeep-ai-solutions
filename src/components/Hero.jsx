@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div {...fade(0.4)} style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 44 }}>
-              <a href="https://calendly.com/ks71156" target="_blank" rel="noopener noreferrer"
+              <a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer"
                 className="btn btn-gold" id="hero-cta-calendly">
                 <Calendar size={17} />
                 Schedule a Free Call
@@ -96,7 +96,7 @@ export default function Hero() {
                 Trusted by clients in
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {["🇦🇺 Australia","🇺🇸 USA","🇬🇧 UK","🇦🇪 UAE","🇯🇵 Japan","🇩🇪 Germany","🇸🇬 Singapore","🇫🇷 France"].map(c => (
+                {["🇦🇺 Australia", "🇺🇸 USA", "🇬🇧 UK", "🇦🇪 UAE", "🇯🇵 Japan", "🇩🇪 Germany", "🇸🇬 Singapore", "🇫🇷 France"].map(c => (
                   <span key={c} className="tag">{c}</span>
                 ))}
               </div>
