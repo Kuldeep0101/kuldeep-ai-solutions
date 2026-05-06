@@ -22,7 +22,7 @@ const goto = href => document.querySelector(href)?.scrollIntoView({ behavior: "s
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#0A1A2E", color: "white" }}>
+    <footer style={{ background: "var(--bg-page)", color: "white", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
       <div className="container" style={{ paddingTop: 32, paddingBottom: 24 }}>
 
         {/* Top grid */}

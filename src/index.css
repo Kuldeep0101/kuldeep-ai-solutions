@@ -60,8 +60,8 @@ body {
 
 /* ─── Section base ─── */
 .section {
-  padding-top: var(--section-gap);
-  padding-bottom: var(--section-gap);
+  padding-top: calc(var(--section-gap) * 0.6);
+  padding-bottom: calc(var(--section-gap) * 0.6);
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 

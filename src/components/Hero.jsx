@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero-bg hero-grid"
-      style={{ minHeight: "92vh", paddingTop: 68, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      style={{ paddingTop: 120, paddingBottom: 0, display: "flex", flexDirection: "column", justifyContent: "center" }}>
 
       {/* Decorative blobs */}
       <div aria-hidden="true" style={{
@@ -23,7 +23,7 @@ export default function Hero() {
         pointerEvents: "none",
       }} />
 
-      <div className="container" style={{ paddingTop: 32, paddingBottom: 92 }}>
+      <div className="container" style={{ paddingTop: 32, paddingBottom: 32 }}>
         <div style={{
           display: "grid",
           gridTemplateColumns: "1.15fr 0.85fr",
@@ -117,7 +117,7 @@ export default function Hero() {
       </div>
 
       <div className="scroll-bounce"
-        style={{ marginTop: "auto", paddingBottom: 24, textAlign: "center", color: "#94A3B8" }}>
+        style={{ marginTop: 24, paddingBottom: 40, textAlign: "center", color: "#94A3B8" }}>
         <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 4 }}>SCROLL</div>
         <ChevronDown size={14} />
       </div>
