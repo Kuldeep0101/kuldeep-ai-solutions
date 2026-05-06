@@ -12,16 +12,15 @@ const SOCIALS = [
 
 function validate(f) {
   const e = {};
-  if (!f.name.trim())    e.name = "Name is required.";
   if (!f.email.trim())   e.email = "Email is required.";
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) e.email = "Enter a valid email.";
-  if (!f.message.trim()) e.message = "Message is required.";
-  else if (f.message.trim().length < 20)                 e.message = "At least 20 characters.";
+  if (!f.website.trim())    e.website = "Website URL is required.";
+  if (!f.goal.trim())       e.goal = "Please let us know your goal.";
   return e;
 }
 
 export default function Contact() {
-  const [form, setForm]     = useState({ name: "", email: "", message: "" });
+  const [form, setForm]     = useState({ email: "", website: "", goal: "" });
   const [errors, setErrors] = useState({});
   const [sent, setSent]     = useState(false);
   const [busy, setBusy]     = useState(false);
@@ -44,10 +43,10 @@ export default function Contact() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: "f14b3dc4-d0d2-4501-8dc9-6afbb019d8ab",
-          name: form.name,
           email: form.email,
-          message: form.message,
-          subject: "New Inquiry from Kuldeep AI Solutions Portfolio",
+          website: form.website,
+          message: `Goal: ${form.goal}\nWebsite: ${form.website}`,
+          subject: "New Free AI Audit Request — Kuldeep AI Solutions",
           from_name: "Portfolio Notification",
         }),
       });
@@ -55,11 +54,10 @@ export default function Contact() {
       const result = await res.json();
       if (result.success) {
         setSent(true);
-      } else {
-        setErrors({ message: "Failed to send message. Please email me directly." });
+        setErrors({ form: "Failed to send request. Please email me directly." });
       }
     } catch (error) {
-      setErrors({ message: "Network error. Please email me directly." });
+      setErrors({ form: "Network error. Please email me directly." });
     }
     setBusy(false);
   };
@@ -115,7 +113,7 @@ export default function Contact() {
                   <Phone size={15} color="white" />
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#93C5FD", marginBottom: 2 }}>WhatsApp / Phone</div>
+                  <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#93C5FD", marginBottom: 2 }}>Global Support: WhatsApp / Call</div>
                   <div style={{ fontSize: "0.875rem", fontWeight: 500, color: "#BFDBFE" }}>{CONTACT.phone}</div>
                 </div>
               </a>
@@ -160,19 +158,8 @@ export default function Contact() {
             <div style={{ background: "white", border: "1px solid #E2E8F0", borderRadius: 16, padding: "36px 32px", boxShadow: "0 2px 12px rgba(26,54,93,0.06)" }}>
               {!sent ? (
                 <form onSubmit={submit} noValidate>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#111827", marginBottom: 24 }}>Send a Message</h3>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#111827", marginBottom: 24 }}>Request Your Free AI Audit</h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-
-                    {/* Name */}
-                    <div>
-                      <label htmlFor="c-name" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#374151", marginBottom: 6 }}>
-                        Full Name <span style={{ color: "#EF4444" }}>*</span>
-                      </label>
-                      <input id="c-name" type="text" name="name" value={form.name} onChange={change}
-                        placeholder="John Smith"
-                        className={`form-field${errors.name ? " form-field-error" : ""}`} />
-                      {errors.name && <p style={{ fontSize: "0.78rem", color: "#EF4444", marginTop: 4 }}>{errors.name}</p>}
-                    </div>
 
                     {/* Email */}
                     <div>
@@ -180,26 +167,40 @@ export default function Contact() {
                         Email Address <span style={{ color: "#EF4444" }}>*</span>
                       </label>
                       <input id="c-email" type="email" name="email" value={form.email} onChange={change}
-                        placeholder="john@company.com"
+                        placeholder="you@company.com"
                         className={`form-field${errors.email ? " form-field-error" : ""}`} />
                       {errors.email && <p style={{ fontSize: "0.78rem", color: "#EF4444", marginTop: 4 }}>{errors.email}</p>}
                     </div>
 
-                    {/* Message */}
+                    {/* Website */}
                     <div>
-                      <label htmlFor="c-msg" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#374151", marginBottom: 6 }}>
-                        Message <span style={{ color: "#EF4444" }}>*</span>
+                      <label htmlFor="c-website" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#374151", marginBottom: 6 }}>
+                        Your Website URL <span style={{ color: "#EF4444" }}>*</span>
                       </label>
-                      <textarea id="c-msg" name="message" value={form.message} onChange={change}
-                        rows={6} placeholder="Tell me about your project goals, timeline, and key requirements..."
-                        className={`form-field${errors.message ? " form-field-error" : ""}`}
-                        style={{ resize: "none" }} />
-                      {errors.message && <p style={{ fontSize: "0.78rem", color: "#EF4444", marginTop: 4 }}>{errors.message}</p>}
+                      <input id="c-website" type="url" name="website" value={form.website} onChange={change}
+                        placeholder="https://yourclinic.com"
+                        className={`form-field${errors.website ? " form-field-error" : ""}`} />
+                      {errors.website && <p style={{ fontSize: "0.78rem", color: "#EF4444", marginTop: 4 }}>{errors.website}</p>}
+                    </div>
+
+                    {/* Goal */}
+                    <div>
+                      <label htmlFor="c-goal" style={{ display: "block", fontSize: "0.84rem", fontWeight: 600, color: "#374151", marginBottom: 6 }}>
+                        What is your #1 Goal? <span style={{ color: "#EF4444" }}>*</span>
+                      </label>
+                      <select id="c-goal" name="goal" value={form.goal} onChange={change}
+                        className={`form-field${errors.goal ? " form-field-error" : ""}`} style={{ appearance: "auto" }}>
+                        <option value="" disabled>Select an option...</option>
+                        <option value="More Leads">More Leads</option>
+                        <option value="Better Visibility">Better Visibility</option>
+                        <option value="Automation">Lead Automation</option>
+                      </select>
+                      {errors.goal && <p style={{ fontSize: "0.78rem", color: "#EF4444", marginTop: 4 }}>{errors.goal}</p>}
                     </div>
 
                     <button type="submit" disabled={busy}
                       className="btn btn-primary"
-                      style={{ width: "100%", opacity: busy ? 0.7 : 1, cursor: busy ? "wait" : "pointer" }}
+                      style={{ width: "100%", height: 48, opacity: busy ? 0.7 : 1, cursor: busy ? "wait" : "pointer" }}
                       id="contact-submit">
                       {busy ? (
                         <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
@@ -207,9 +208,9 @@ export default function Contact() {
                             <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" strokeOpacity="0.25"/>
                             <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
                           </svg>
-                          Sending...
+                          Analyzing...
                         </span>
-                      ) : <><Send size={15} /> Send Message</>}
+                      ) : <><Send size={15} /> Request Free Audit</>}
                     </button>
                   </div>
                 </form>

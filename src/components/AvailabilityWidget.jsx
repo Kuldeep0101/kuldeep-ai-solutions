@@ -54,7 +54,7 @@ export default function AvailabilityWidget({ compact = false, dark = false }) {
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
         <Globe size={16} style={{ color: "#1A365D" }} />
         <span style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A365D" }}>
-          Global Availability
+          Global Delivery Hub
         </span>
       </div>
 
@@ -65,30 +65,23 @@ export default function AvailabilityWidget({ compact = false, dark = false }) {
           <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "#22C55E" }} />
         </div>
         <div>
-          <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#15803d" }}>Available for International Projects</div>
-          <div style={{ fontSize: "0.75rem", color: "#6B7280" }}>Accepting new clients worldwide</div>
+          <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#15803d" }}>Working while you sleep</div>
+          <div style={{ fontSize: "0.75rem", color: "#6B7280" }}>Seamless US-India Sync</div>
         </div>
       </div>
 
-      {/* Clock box */}
-      <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 12, padding: "14px 16px", marginBottom: 12 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4, color: "#94A3B8" }}>
-          <Clock size={12} />
-          <span style={{ fontSize: "0.65rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.10em" }}>Current Time — IST</span>
+      {/* Details Grid */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 12 }}>
+        <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 10, padding: "12px", textAlign: "center" }}>
+          <div style={{ fontSize: "0.65rem", color: "#94A3B8", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Priority Support</div>
+          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#1A365D" }}>Instant Response</div>
         </div>
-        <div style={{ fontFamily: "monospace", fontSize: "1.5rem", fontWeight: 800, color: "#1A365D", letterSpacing: "0.02em" }}>{time}</div>
-        <div style={{ fontSize: "0.82rem", color: "#6B7280", marginTop: 2 }}>{date}</div>
+        <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 10, padding: "12px", textAlign: "center" }}>
+          <div style={{ fontSize: "0.65rem", color: "#94A3B8", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Global Availability</div>
+          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#1A365D" }}>24/7 Operations</div>
+        </div>
       </div>
 
-      {/* Meta */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-        {[["Response Time", "< 24 Hours"], ["Time Zone", "UTC +5:30"]].map(([label, val]) => (
-          <div key={label} style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 10, padding: "10px 12px", textAlign: "center" }}>
-            <div style={{ fontSize: "0.7rem", color: "#94A3B8", marginBottom: 3 }}>{label}</div>
-            <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#1A365D" }}>{val}</div>
-          </div>
-        ))}
-      </div>
 
       <style>{`
         @keyframes ping { 75%, 100% { transform: scale(1.8); opacity: 0; } }

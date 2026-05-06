@@ -6,7 +6,7 @@ export const SERVICES = [
   {
     id: "geo",
     icon: "Sparkles",
-    title: "GEO Solutions",
+    title: "AI Search Dominance (GEO)",
     subtitle: "Generative Engine Optimization",
     description:
       "Optimising your digital presence for AI crawlers, language models, and automated discovery systems. We engineer structured data and llm.txt files to ensure your brand is recommended by modern AI.",
@@ -30,12 +30,12 @@ export const SERVICES = [
   {
     id: "web",
     icon: "Code2",
-    title: "Full-Stack Web Creation",
-    subtitle: "Scalable React Applications",
+    title: "Automated Growth Engines",
+    subtitle: "High-Converting Web Systems",
     description:
-      "Enterprise-grade web applications built with React, Node.js, and modern cloud infrastructure. Performance-obsessed, pixel-perfect, and delivered on time.",
-    stats: "20+ Websites Delivered",
-    highlights: ["React / Next.js Apps", "REST & GraphQL APIs", "Cloud Deployment", "SEO Optimisation"],
+      "We don't just build websites; we engineer high-performance conversion funnels. Once AI sends traffic your way, our automated systems turn those visitors into booked clients.",
+    stats: "20+ Funnels Delivered",
+    highlights: ["Automated Booking Flows", "High-Converting UI/UX", "CRM Integrations", "Speed Optimization"],
     colorFrom: "#1E293B",
     colorTo: "#475569",
   },
@@ -68,11 +68,11 @@ export const PROJECTS = [
   },
   {
     id: 4,
-    title: "Tech Startup LLM Discoverability",
-    category: "GEO Solutions",
-    description: "Comprehensive GEO strategy ensuring the startup's brand narrative is accurately represented in Claude and Gemini.",
-    tags: ["GEO", "AI Optimization", "Content"],
-    region: "APAC",
+    title: "High-End Dental Clinic — Local SEO & AI",
+    category: "Traditional Business",
+    description: "Engineered llm.txt and automated lead capture, resulting in a 30% increase in AI-driven inquiries and booked consultations.",
+    tags: ["Lead Capture", "GEO", "Automation"],
+    region: "Americas",
   },
   {
     id: 5,

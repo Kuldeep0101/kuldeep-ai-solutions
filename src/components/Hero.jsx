@@ -44,28 +44,29 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1 {...fade(0.2)}
               style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", fontWeight: 900, lineHeight: 1.15, letterSpacing: "-0.03em", color: "#0F172A", marginBottom: 20 }}>
-              High-Performance{" "}
-              <span className="grad-text">Digital Solutions</span>{" "}
-              for a Global Market
+              Be the #1 Recommended Business in ChatGPT &amp; <span className="grad-text">Automate Your Lead Flow</span>.
             </motion.h1>
 
             <motion.p {...fade(0.3)}
               style={{ fontSize: "1.05rem", color: "#4A5568", lineHeight: 1.8, maxWidth: 480, marginBottom: 36 }}>
-              From Generative Engine Optimization to high-converting React applications and
-              global social media strategies — engineered for scale, delivered with excellence.
+              Most businesses are invisible to AI. We engineer your site to be the first answer when local customers ask ChatGPT, Gemini, or Claude for recommendations—then we build the automation to close them.
             </motion.p>
 
-            {/* CTAs */}
-            <motion.div {...fade(0.4)} style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 44 }}>
-              <a href="https://calendly.com/ks71156/strategy-session" target="_blank" rel="noopener noreferrer"
-                className="btn btn-gold" id="hero-cta-calendly">
-                <Calendar size={17} />
-                Schedule a Free Call
-              </a>
-              <button className="btn btn-outline" onClick={() => scrollTo("#projects")} id="hero-cta-projects">
-                View Projects
-                <ArrowRight size={15} />
-              </button>
+            {/* Quick Scan & CTAs */}
+            <motion.div {...fade(0.4)} style={{ marginBottom: 44 }}>
+              <form onSubmit={(e) => { e.preventDefault(); scrollTo("#contact"); }} style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+                <input 
+                  type="url" 
+                  placeholder="Enter your URL to see if ChatGPT can find you" 
+                  className="form-field" 
+                  style={{ flex: 1, minWidth: 260, height: 48, background: "white" }} 
+                  required 
+                />
+                <button type="submit" className="btn btn-gold" style={{ height: 48, whiteSpace: "nowrap" }} id="hero-cta-audit">
+                  <Calendar size={17} />
+                  Get Your Free AI Audit ($500 Value)
+                </button>
+              </form>
             </motion.div>
 
             {/* Stats */}
@@ -119,6 +120,7 @@ export default function Hero() {
           #hero > .container > div > div:first-child > div[style*="grid-template-columns: repeat(4"] {
             grid-template-columns: repeat(2, 1fr) !important;
           }
+          #hero-cta-audit { width: 100%; box-shadow: 0 8px 32px rgba(212,168,67,0.5) !important; font-size: 1rem !important; }
         }
       `}</style>
     </section>
